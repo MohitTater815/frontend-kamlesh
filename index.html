@@ -30,7 +30,7 @@
     async function checkBackend() {
       const status = document.getElementById("status");
       try {
-        const res = await fetch("/api/data"); // direct backend call (no port)
+        const res = await fetch("/api/api"); // direct backend call (no port)
         if (!res.ok) throw new Error("Backend not reachable");
         const data = await res.json();
         status.textContent = "✅ Connected to Backend: " + data.message;
